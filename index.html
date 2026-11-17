@@ -4,20 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071b16">
+<meta name="theme-color" content="#102d23">
 <title>OUD AL HERA | Luxury Fragrance</title>
 
 <style>
 :root {
-  --black: #07110f;
-  --deep: #091d17;
-  --green: #102e24;
-  --green-light: #173c2e;
-  --gold: #c6a568;
-  --gold-light: #e2cca0;
-  --ivory: #eee8dc;
-  --muted: #aaa99d;
-  --line: rgba(198,165,104,.28);
+  --forest: #102d23;
+  --deep: #091a14;
+  --green: #1b4635;
+  --gold: #b99a5b;
+  --champagne: #dfc99a;
+  --ivory: #f8f5ed;
+  --beige: #eae1d0;
+  --white: #fffdf8;
+  --text: #34443a;
+  --muted: #77766c;
 }
 
 * {
@@ -28,25 +29,23 @@
 }
 
 body {
-  background: var(--black);
-  color: var(--ivory);
-  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  background: var(--ivory);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
   overflow-x: hidden;
 }
 
-a { color: inherit; }
-
 /* HEADER */
 header {
-  min-height: 90px;
-  padding: 15px 7%;
+  padding: 14px 7%;
+  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  background: rgba(7,17,15,.96);
-  border-bottom: 1px solid var(--line);
+  background: var(--deep);
+  border-bottom: 1px solid rgba(185,154,91,.5);
   position: relative;
   z-index: 5;
 }
@@ -54,78 +53,68 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
 }
 
 .brand img {
   width: 58px;
   height: 58px;
   object-fit: contain;
-  background: #fff;
   border-radius: 50%;
+  background: white;
 }
 
 .brand-name {
-  color: var(--gold-light);
-  font-size: 21px;
-  letter-spacing: 4px;
+  color: var(--champagne);
+  font-size: 20px;
   font-weight: bold;
+  letter-spacing: 3px;
 }
 
 nav {
   display: flex;
   align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
-  gap: 28px;
 }
 
 nav a {
   text-decoration: none;
-  color: #dedbd1;
+  color: #f0eadc;
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   transition: .3s;
 }
 
 nav a:hover {
-  color: var(--gold-light);
+  color: var(--champagne);
 }
 
 .language-button {
   background: transparent;
-  color: var(--gold-light);
   border: 1px solid var(--gold);
-  padding: 9px 15px;
-  font-size: 12px;
-  letter-spacing: 1px;
+  color: var(--champagne);
+  padding: 9px 14px;
   cursor: pointer;
-  transition: .3s;
 }
 
-.language-button:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-/* MOVING GOLD BANNER */
+/* MOVING BANNER */
 .ticker {
-  background: linear-gradient(90deg,#8e713d,#d3b77e,#987b48);
-  color: #101711;
   overflow: hidden;
   white-space: nowrap;
+  background: linear-gradient(90deg,#b99a5b,#e2d0a5,#b99a5b);
+  color: #17251b;
   padding: 12px 0;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
+  font: bold 11px Arial, sans-serif;
   letter-spacing: 3px;
-  font-weight: bold;
 }
 
 .ticker-track {
   display: inline-block;
   padding-left: 100%;
-  animation: tickerMove 26s linear infinite;
+  animation: tickerMove 25s linear infinite;
 }
 
 @keyframes tickerMove {
@@ -133,147 +122,155 @@ nav a:hover {
   to { transform: translateX(-100%); }
 }
 
-/* HERO */
+/* HOME */
 .hero {
-  min-height: 82vh;
-  padding: 80px 20px;
+  min-height: 78vh;
+  padding: 75px 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  overflow: hidden;
   background:
-    radial-gradient(ellipse at 50% 45%, #17372a 0%, #0b2119 42%, #07110f 82%);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border: 1px solid rgba(198,165,104,.08);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 35px rgba(198,165,104,.025),
-    0 0 0 75px rgba(198,165,104,.018);
-  pointer-events: none;
+    radial-gradient(ellipse at center,#234a38 0%,#143426 43%,#0b1c15 100%);
+  color: white;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  max-width: 760px;
 }
 
 .hero-logo {
-  width: 175px;
-  height: 175px;
+  width: 170px;
+  height: 170px;
   object-fit: contain;
-  background: #fff;
+  background: white;
   border-radius: 50%;
   padding: 5px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 35px rgba(198,165,104,.15);
-  animation: logoAppear 1.2s ease both;
+  margin-bottom: 28px;
+  box-shadow: 0 0 35px rgba(223,201,154,.2);
+  animation: appear 1s ease both;
 }
 
-@keyframes logoAppear {
+@keyframes appear {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .eyebrow {
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 11px;
+  color: var(--champagne);
+  font: 11px Arial, sans-serif;
   letter-spacing: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  color: var(--gold-light);
-  font-size: clamp(34px,7vw,65px);
-  letter-spacing: 7px;
+  color: var(--champagne);
+  font-size: clamp(34px,7vw,64px);
   font-weight: normal;
+  letter-spacing: 6px;
   margin-bottom: 20px;
 }
 
-.hero-rule {
-  width: 90px;
+.gold-line {
+  width: 85px;
   height: 1px;
   background: var(--gold);
   margin: 0 auto 22px;
 }
 
 .hero p {
-  color: #c4c3b9;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 2;
+  color: #e7e2d6;
+  font: 13px/2 Arial, sans-serif;
   letter-spacing: 2px;
 }
 
-.hero-button {
+.button {
   display: inline-block;
-  margin-top: 35px;
-  padding: 15px 28px;
-  border: 1px solid var(--gold);
-  color: var(--gold-light);
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  transition: .35s;
-}
-
-.hero-button:hover {
+  margin-top: 30px;
+  padding: 14px 26px;
   background: var(--gold);
-  color: var(--black);
+  color: #101d15;
+  text-decoration: none;
+  font: bold 11px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  transition: .3s;
 }
 
-/* SECTIONS */
+.button:hover {
+  background: var(--champagne);
+  transform: translateY(-3px);
+}
+
+/* COMMON SECTION TITLES */
 section:not(.hero) {
-  padding: 90px 7%;
+  padding: 80px 7%;
 }
 
 .section-heading {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 42px;
 }
 
-.section-kicker {
+.kicker {
   color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 10px;
+  font: 10px Arial, sans-serif;
   letter-spacing: 4px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .section-title {
-  color: var(--gold-light);
+  color: var(--forest);
   font-size: clamp(27px,4vw,38px);
   font-weight: normal;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .section-description {
   color: var(--muted);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  margin-top: 16px;
+  font: 13px Arial, sans-serif;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* ABOUT */
+#about {
+  background: var(--ivory);
+  color: var(--text);
+}
+
+.about-panel {
+  max-width: 900px;
+  margin: auto;
+  padding: 45px 35px;
+  background: var(--white);
+  border: 1px solid #dfd2b7;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(47,39,21,.05);
+}
+
+.about-panel p {
+  max-width: 720px;
+  margin: 0 auto 18px;
+  color: #625f54;
+  font: 14px/2 Arial, sans-serif;
+}
+
+.about-highlight {
+  color: #96783e !important;
+  font-family: Georgia, serif !important;
+  font-size: 18px !important;
   letter-spacing: 1px;
 }
 
 /* BRANCHES */
 #branches {
-  background: linear-gradient(180deg,#0b2119,#081712);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: var(--beige);
+  border-top: 1px solid #dfd3bd;
+  border-bottom: 1px solid #dfd3bd;
 }
 
 .branch-grid {
-  max-width: 1120px;
+  max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
@@ -282,28 +279,27 @@ section:not(.hero) {
 
 .branch-card {
   min-height: 175px;
-  padding: 30px 22px;
-  background: linear-gradient(145deg,#142e24,#0b1b15);
-  border: 1px solid rgba(198,165,104,.22);
-  transition: .35s;
+  padding: 28px 22px;
+  background: var(--white);
+  border: 1px solid #d6c49e;
+  transition: .3s;
 }
 
 .branch-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   border-color: var(--gold);
-  background: linear-gradient(145deg,#1b3b2d,#10251c);
+  box-shadow: 0 12px 25px rgba(49,39,18,.08);
 }
 
 .branch-number {
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 3px;
-  margin-bottom: 22px;
+  color: #a3874d;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 .branch-card h3 {
-  color: var(--gold-light);
+  color: var(--forest);
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 12px;
@@ -311,30 +307,34 @@ section:not(.hero) {
 }
 
 .branch-card p {
-  color: #aaa99d;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.7;
+  color: #77766c;
+  font: 12px/1.7 Arial, sans-serif;
 }
 
 /* CONTACT */
 #contact {
-  background:
-    radial-gradient(ellipse at center,#142b21 0%,#07110f 75%);
+  background: var(--forest);
+  color: var(--ivory);
   text-align: center;
+}
+
+#contact .section-title {
+  color: var(--champagne);
+}
+
+#contact .section-description {
+  color: #d1cbbd;
 }
 
 .contact-info {
   max-width: 600px;
   margin: auto;
-  color: #c4c3b9;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 2.5;
+  font: 13px/2.5 Arial, sans-serif;
+  color: #e7e1d4;
 }
 
 .contact-info a {
-  color: var(--gold-light);
+  color: var(--champagne);
   text-decoration: none;
 }
 
@@ -343,73 +343,67 @@ section:not(.hero) {
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .contact-button {
   display: inline-block;
   padding: 14px 22px;
   border: 1px solid var(--gold);
-  color: var(--gold-light);
+  color: var(--champagne);
   text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
+  font: 11px Arial, sans-serif;
   letter-spacing: 1.5px;
   transition: .3s;
 }
 
 .contact-button:hover {
   background: var(--gold);
-  color: var(--black);
+  color: var(--deep);
 }
 
 /* FOOTER */
 footer {
-  background: #050c09;
-  border-top: 1px solid var(--line);
+  background: #07130e;
+  color: #aaa18d;
   text-align: center;
-  padding: 25px 15px;
-  color: #8e8d82;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
+  padding: 26px 15px;
+  font: 10px/2 Arial, sans-serif;
+  letter-spacing: 1.5px;
 }
 
 .footer-brand {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 15px;
+  color: var(--champagne);
+  font: 16px Georgia, serif;
   letter-spacing: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+/* ARABIC */
 [dir="rtl"] nav {
   flex-direction: row-reverse;
 }
 
 [dir="rtl"] .hero,
+[dir="rtl"] #about,
 [dir="rtl"] #branches,
 [dir="rtl"] #contact {
   direction: rtl;
 }
 
+/* MOBILE */
 @media(max-width:700px) {
   header {
     justify-content: center;
   }
 
-  .brand {
-    justify-content: center;
-  }
-
   .brand-name {
     font-size: 17px;
-    letter-spacing: 3px;
   }
 
   nav {
     justify-content: center;
-    gap: 16px;
+    gap: 15px;
   }
 
   nav a {
@@ -417,7 +411,7 @@ footer {
   }
 
   .hero {
-    min-height: 75vh;
+    min-height: 72vh;
   }
 
   .hero-logo {
@@ -426,19 +420,23 @@ footer {
   }
 
   .hero h1 {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
 
   section:not(.hero) {
-    padding: 65px 6%;
+    padding: 60px 6%;
+  }
+
+  .about-panel {
+    padding: 32px 20px;
   }
 }
 
 @media(prefers-reduced-motion:reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
+    animation: none !important;
+    transition: none !important;
   }
 }
 </style>
@@ -448,12 +446,13 @@ footer {
 
 <header>
   <div class="brand">
-    <img src="IMG-20261117-WA0000.jpg" alt="OUD AL HERA logo">
+    <img src="IMG-20261117-WA0000.jpg" alt="OUD AL HERA original logo">
     <div class="brand-name">OUD AL HERA</div>
   </div>
 
   <nav>
     <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
     <a href="#branches" data-en="Our Branches" data-ar="فروعنا">Our Branches</a>
     <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
     <button class="language-button" onclick="toggleLanguage()">العربية</button>
@@ -462,10 +461,7 @@ footer {
 
 <div class="ticker">
   <div class="ticker-track" id="tickerText">
-    OUD AL HERA &nbsp; ✦ &nbsp; THE ART OF LUXURY
-    &nbsp; ✦ &nbsp; ELEGANCE IN EVERY DROP
-    &nbsp; ✦ &nbsp; A SIGNATURE OF DISTINCTION
-    &nbsp; ✦ &nbsp; OUD AL HERA
+    OUD AL HERA ✦ THE ART OF LUXURY ✦ ELEGANCE IN EVERY DROP ✦ A SIGNATURE OF DISTINCTION ✦
   </div>
 </div>
 
@@ -482,22 +478,59 @@ footer {
     </div>
 
     <h1>OUD AL HERA</h1>
-    <div class="hero-rule"></div>
+    <div class="gold-line"></div>
 
     <p id="heroText">
       THE ART OF LUXURY FRAGRANCE<br>
       Elegance in every drop.
     </p>
 
-    <a href="#branches" class="hero-button" id="heroButton">
-      DISCOVER OUR BRANCHES
+    <a href="#about" class="button" id="heroButton">
+      DISCOVER OUR STORY
     </a>
   </div>
 </section>
 
+<!-- ABOUT US -->
+<section id="about">
+  <div class="section-heading">
+    <div class="kicker" data-en="OUR IDENTITY" data-ar="هويتنا">
+      OUR IDENTITY
+    </div>
+
+    <h2 class="section-title" data-en="ABOUT OUD AL HERA" data-ar="عن عود الحيرة">
+      ABOUT OUD AL HERA
+    </h2>
+
+    <p class="section-description"
+       data-en="A name inspired by the elegance of fragrance"
+       data-ar="اسم يستلهم أناقة العطور">
+      A name inspired by the elegance of fragrance
+    </p>
+  </div>
+
+  <div class="about-panel">
+    <p class="about-highlight" data-en="A signature of elegance. A world of fragrance."
+       data-ar="عنوان للأناقة وعالم من العطور.">
+      A signature of elegance. A world of fragrance.
+    </p>
+
+    <p data-en="OUD AL HERA celebrates the art of fragrance, bringing a sense of elegance and distinction to every experience. Our name represents a passion for refined fragrance and timeless style."
+       data-ar="تحتفي عود الحيرة بفن العطور، وتقدم إحساساً بالأناقة والتميز في كل تجربة.">
+      OUD AL HERA celebrates the art of fragrance, bringing a sense of elegance and distinction to every experience. Our name represents a passion for refined fragrance and timeless style.
+    </p>
+
+    <p data-en="Discover OUD AL HERA at our branches across the UAE and connect with us for more information."
+       data-ar="اكتشفوا عود الحيرة في فروعنا في جميع أنحاء الإمارات وتواصلوا معنا للمزيد من المعلومات.">
+      Discover OUD AL HERA at our branches across the UAE and connect with us for more information.
+    </p>
+  </div>
+</section>
+
+<!-- BRANCHES -->
 <section id="branches">
   <div class="section-heading">
-    <div class="section-kicker" data-en="OUR PRESENCE" data-ar="تواجدنا">
+    <div class="kicker" data-en="OUR PRESENCE" data-ar="تواجدنا">
       OUR PRESENCE
     </div>
 
@@ -513,7 +546,6 @@ footer {
   </div>
 
   <div class="branch-grid">
-
     <div class="branch-card">
       <div class="branch-number">LOCATION — 01</div>
       <h3>Madeena Shopping Centre</h3>
@@ -543,13 +575,13 @@ footer {
       <h3>Nesto Hypermarket</h3>
       <p>Rolla, Sharjah, UAE</p>
     </div>
-
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-heading">
-    <div class="section-kicker" data-en="GET IN TOUCH" data-ar="تواصل معنا">
+    <div class="kicker" data-en="GET IN TOUCH" data-ar="تواصل معنا">
       GET IN TOUCH
     </div>
 
@@ -586,13 +618,13 @@ footer {
          href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20perfumes."
          target="_blank" rel="noopener"
          id="whatsappButton">
-        WHATSAPP
+        MESSAGE ON WHATSAPP
       </a>
 
       <a class="contact-button"
          href="https://www.instagram.com/oudalheraperfumesofficial/"
          target="_blank" rel="noopener">
-        INSTAGRAM
+        FOLLOW ON INSTAGRAM
       </a>
     </div>
   </div>
@@ -603,7 +635,7 @@ footer {
 <footer>
   <div class="footer-brand">OUD AL HERA</div>
   <p>THE ART OF LUXURY FRAGRANCE</p>
-  <p style="margin-top:12px;">© 2026 OUD AL HERA. ALL RIGHTS RESERVED.</p>
+  <p>© 2026 OUD AL HERA. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <script>
@@ -632,14 +664,14 @@ function toggleLanguage() {
     : "THE ART OF LUXURY FRAGRANCE<br>Elegance in every drop.";
 
   document.getElementById("heroButton").textContent =
-    isArabic ? "اكتشف فروعنا" : "DISCOVER OUR BRANCHES";
+    isArabic ? "اكتشف قصتنا" : "DISCOVER OUR STORY";
 
   document.getElementById("tickerText").innerHTML = isArabic
     ? "عود الحيرة ✦ فن العطور الفاخرة ✦ الأناقة في كل قطرة ✦"
     : "OUD AL HERA ✦ THE ART OF LUXURY ✦ ELEGANCE IN EVERY DROP ✦ A SIGNATURE OF DISTINCTION ✦";
 
   document.getElementById("whatsappButton").textContent =
-    isArabic ? "واتساب" : "WHATSAPP";
+    isArabic ? "راسلنا عبر واتساب" : "MESSAGE ON WHATSAPP";
 }
 </script>
 
