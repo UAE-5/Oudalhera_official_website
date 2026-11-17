@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#062c22">
-<title>OUD AL HERA | Luxury Perfumes</title>
-<meta name="description" content="Discover OUD AL HERA. Explore our UAE branches and contact us through WhatsApp or Instagram.">
+
+<title>OUD AL HERA | Luxury Fragrance</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +14,7 @@
 <style>
 :root {
   --green: #062c22;
-  --green2: #0b4031;
+  --green2: #104635;
   --gold: #d5b36a;
   --ivory: #f7f1e5;
   --muted: #c9c1ae;
@@ -40,15 +39,17 @@ a {
   text-decoration: none;
 }
 
+/* HEADER */
+
 header {
-  min-height: 78px;
-  padding: 15px 7%;
+  min-height: 80px;
+  padding: 14px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   border-bottom: 1px solid rgba(213,179,106,.35);
-  background: rgba(3,27,21,.97);
+  background: var(--dark);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -59,17 +60,17 @@ header {
   align-items: center;
   gap: 12px;
 }
-
-.brand img {
-  width: 52px;
-  height: 52px;
+o
+.brand img {src="IMG-20261117-WA0000.jpg"
+  width: 55px;
+  height: 55px;
   object-fit: contain;
 }
 
 .brand-name {
   font-family: 'Cormorant Garamond', serif;
   color: var(--gold);
-  font-size: 25px;
+  font-size: 26px;
   letter-spacing: 3px;
   font-weight: 600;
 }
@@ -77,7 +78,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 27px;
+  gap: 25px;
 }
 
 nav a {
@@ -101,46 +102,65 @@ nav a:hover {
   font-family: inherit;
 }
 
+/* MOVING TEXT */
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 12px 0;
+}
+
+.ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: moveText 28s linear infinite;
+}
+
+.ticker-track span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-right: 55px;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* FIRST PAGE */
+
 .hero {
-  min-height: 660px;
-  padding: 90px 20px;
+  min-height: 650px;
+  padding: 85px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+
+  /* Clean background without decorative lines */
   background:
-    radial-gradient(ellipse at center, rgba(22,83,61,.65), transparent 65%),
+    radial-gradient(ellipse at center, rgba(22,83,61,.5), transparent 70%),
     linear-gradient(135deg, #062c22, #031b15);
 }
 
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 310px;
-  height: 310px;
-  border: 1px solid rgba(213,179,106,.18);
-  transform: rotate(45deg);
-}
-
-.hero::after {
-  width: 240px;
-  height: 240px;
-}
-
 .hero-content {
-  position: relative;
-  z-index: 1;
+  max-width: 850px;
 }
 
-.hero-logo {
-  width: 135px;
-  height: 135px;
+.hero-logo {src="IMG-20261117-WA0000.jpg"
+  width: 150px;
+  height: 150px;
   object-fit: contain;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
 .eyebrow {
@@ -153,25 +173,25 @@ nav a:hover {
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(48px, 9vw, 92px);
+  font-size: clamp(45px, 9vw, 95px);
   line-height: 1;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   color: var(--gold);
   font-weight: 500;
 }
 
 .hero h2 {
-  margin-top: 20px;
+  margin-top: 22px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(22px, 4vw, 34px);
+  font-size: clamp(23px, 4vw, 36px);
   font-weight: 400;
   letter-spacing: 2px;
 }
 
 .hero p {
-  max-width: 570px;
-  margin: 22px auto 30px;
-  line-height: 1.9;
+  max-width: 580px;
+  margin: 23px auto 30px;
+  line-height: 2;
   color: var(--muted);
   font-size: 13px;
 }
@@ -206,6 +226,8 @@ nav a:hover {
   border-color: var(--ivory);
 }
 
+/* SECTIONS */
+
 .section {
   padding: 95px 7%;
   text-align: center;
@@ -234,9 +256,19 @@ nav a:hover {
   margin: 0 auto 45px;
 }
 
+/* BRANCHES */
+
 .branches {
   background: var(--ivory);
   color: var(--green);
+}
+
+.branches .section-title {
+  color: #98712f;
+}
+
+.branches .gold-line {
+  background: #98712f;
 }
 
 .branches .section-intro {
@@ -253,7 +285,7 @@ nav a:hover {
 
 .branch-card {
   border: 1px solid rgba(153,119,52,.55);
-  padding: 30px 20px;
+  padding: 32px 20px;
   background: #fffaf0;
   transition: .3s;
 }
@@ -288,9 +320,11 @@ nav a:hover {
   grid-column: 1 / -1;
 }
 
+/* CONTACT */
+
 .contact {
   background:
-    radial-gradient(ellipse at top, rgba(24,83,60,.55), transparent 65%),
+    radial-gradient(ellipse at top, rgba(24,83,60,.5), transparent 65%),
     var(--green);
 }
 
@@ -303,20 +337,20 @@ nav a:hover {
 }
 
 .contact-card {
-  padding: 30px 20px;
+  padding: 32px 20px;
   border: 1px solid rgba(213,179,106,.45);
   background: rgba(3,27,21,.4);
 }
 
 .contact-icon {
-  font-size: 27px;
+  font-size: 28px;
   margin-bottom: 15px;
 }
 
 .contact-card h3 {
   font-family: 'Cormorant Garamond', serif;
   color: var(--gold);
-  font-size: 26px;
+  font-size: 27px;
   margin-bottom: 12px;
 }
 
@@ -342,9 +376,11 @@ nav a:hover {
   line-height: 1.8;
 }
 
+/* FOOTER */
+
 footer {
   text-align: center;
-  padding: 35px 20px;
+  padding: 38px 20px;
   border-top: 1px solid rgba(213,179,106,.3);
   background: var(--dark);
 }
@@ -352,7 +388,7 @@ footer {
 .footer-name {
   color: var(--gold);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
+  font-size: 29px;
   letter-spacing: 4px;
 }
 
@@ -376,6 +412,8 @@ footer p {
   font-size: 11px;
 }
 
+/* FLOATING WHATSAPP */
+
 .whatsapp-float {
   position: fixed;
   right: 20px;
@@ -397,6 +435,8 @@ footer p {
   background: #159c53;
 }
 
+/* ARABIC */
+
 [dir="rtl"] {
   font-family: 'Amiri', serif;
 }
@@ -404,6 +444,8 @@ footer p {
 [dir="rtl"] nav {
   flex-direction: row-reverse;
 }
+
+/* MOBILE */
 
 @media (max-width: 720px) {
   header {
@@ -433,7 +475,7 @@ footer p {
   }
 
   .hero h1 {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
 
   .section {
@@ -456,6 +498,16 @@ footer p {
     padding: 12px 15px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+
+  * {
+    scroll-behavior: auto;
+  }
+}
 </style>
 </head>
 
@@ -463,8 +515,7 @@ footer p {
 
 <header>
   <a class="brand" href="#home" aria-label="OUD AL HERA home">
-    <img src="logo.jpg" alt="OUD AL HERA original logo"
-         onerror="this.style.display='none'">
+    <img src="IMG-20261117-WA0000.jpg" alt="Original OUD AL HERA logo">
     <span class="brand-name">OUD AL HERA</span>
   </a>
 
@@ -476,19 +527,38 @@ footer p {
   </nav>
 </header>
 
+<!-- MOVING TEXT BANNER -->
+
+<div class="ticker" aria-label="Luxury fragrance banner">
+  <div class="ticker-track">
+    <span>OUD AL HERA ✦ THE ART OF LUXURY FRAGRANCE ✦ ELEGANCE IN EVERY DROP ✦ </span>
+    <span>OUD AL HERA ✦ THE ART OF LUXURY FRAGRANCE ✦ ELEGANCE IN EVERY DROP ✦ </span>
+  </div>
+</div>
+
 <main>
+
+<!-- HOME -->
+
 <section class="hero" id="home">
   <div class="hero-content">
-    <img class="hero-logo" src="logo.jpg" alt="OUD AL HERA logo"
-         onerror="this.style.display='none'">
 
-    <div class="eyebrow" data-en="The Art of Luxury Fragrance"
-         data-ar="فن العطور الفاخرة">The Art of Luxury Fragrance</div>
+    <img class="hero-logo"
+         src="IMG-20261117-WA0000.jpg"
+         alt="Original OUD AL HERA logo">
+
+    <div class="eyebrow"
+         data-en="The Art of Luxury Fragrance"
+         data-ar="فن العطور الفاخرة">
+      The Art of Luxury Fragrance
+    </div>
 
     <h1>OUD AL HERA</h1>
 
     <h2 data-en="A Signature of Elegance"
-        data-ar="عنوان الأناقة">A Signature of Elegance</h2>
+        data-ar="عنوان الأناقة">
+      A Signature of Elegance
+    </h2>
 
     <p data-en="Discover the world of OUD AL HERA. Experience elegance, luxury and the beauty of fragrance."
        data-ar="اكتشف عالم عود الهيرا. استمتع بالأناقة والفخامة وجمال العطور.">
@@ -497,12 +567,23 @@ footer p {
 
     <a class="button filled" href="#branches"
        data-en="Explore Our Branches"
-       data-ar="اكتشف فروعنا">Explore Our Branches</a>
+       data-ar="اكتشف فروعنا">
+      Explore Our Branches
+    </a>
+
   </div>
 </section>
 
+<!-- BRANCHES -->
+
 <section class="section branches" id="branches">
-  <h2 class="section-title" data-en="Our Branches" data-ar="فروعنا">Our Branches</h2>
+
+  <h2 class="section-title"
+      data-en="Our Branches"
+      data-ar="فروعنا">
+    Our Branches
+  </h2>
+
   <div class="gold-line"></div>
 
   <p class="section-intro"
@@ -512,6 +593,7 @@ footer p {
   </p>
 
   <div class="branch-grid">
+
     <article class="branch-card">
       <div class="branch-number">01</div>
       <h3>Madeena Shopping Centre</h3>
@@ -541,11 +623,20 @@ footer p {
       <h3>Nesto Hypermarket</h3>
       <p>Rolla, Sharjah, UAE</p>
     </article>
+
   </div>
 </section>
 
+<!-- CONTACT -->
+
 <section class="section contact" id="contact">
-  <h2 class="section-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+
+  <h2 class="section-title"
+      data-en="Contact Us"
+      data-ar="تواصل معنا">
+    Contact Us
+  </h2>
+
   <div class="gold-line"></div>
 
   <p class="section-intro"
@@ -555,94 +646,136 @@ footer p {
   </p>
 
   <div class="contact-grid">
+
     <div class="contact-card">
       <div class="contact-icon">✆</div>
-      <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
+      <h3>WhatsApp</h3>
       <p>+971 56 968 2627</p>
+
       <a class="button filled"
          href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20perfumes."
-         target="_blank" rel="noopener"
+         target="_blank"
+         rel="noopener"
          data-en="Message Us Now"
-         data-ar="راسلنا الآن">Message Us Now</a>
+         data-ar="راسلنا الآن">
+        Message Us Now
+      </a>
     </div>
 
     <div class="contact-card">
       <div class="contact-icon">◎</div>
-      <h3 data-en="Instagram" data-ar="إنستغرام">Instagram</h3>
+      <h3>Instagram</h3>
       <p>@oudalheraperfumesofficial</p>
+
       <a class="button"
          href="https://www.instagram.com/oudalheraperfumesofficial/"
-         target="_blank" rel="noopener"
+         target="_blank"
+         rel="noopener"
          data-en="Visit Instagram"
-         data-ar="زيارة إنستغرام">Visit Instagram</a>
+         data-ar="زيارة إنستغرام">
+        Visit Instagram
+      </a>
     </div>
 
     <div class="contact-card full">
       <div class="contact-icon">✧</div>
       <h3>OUD AL HERA</h3>
+
       <p data-en="Luxury Fragrance • United Arab Emirates"
          data-ar="عطور فاخرة • الإمارات العربية المتحدة">
         Luxury Fragrance • United Arab Emirates
       </p>
+
       <a class="button filled"
          href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-         target="_blank" rel="noopener"
+         target="_blank"
+         rel="noopener"
          data-en="Send an Enquiry"
-         data-ar="أرسل استفسارك">Send an Enquiry</a>
+         data-ar="أرسل استفسارك">
+        Send an Enquiry
+      </a>
     </div>
+
   </div>
 
   <p class="contact-note"
-     data-en="Tap the WhatsApp button to open a chat with a prepared message. You can review it and press Send."
-     data-ar="اضغط على زر واتساب لفتح محادثة برسالة جاهزة. يمكنك مراجعتها ثم الضغط على إرسال.">
-    Tap the WhatsApp button to open a chat with a prepared message. You can review it and press Send.
+     data-en="Tap the WhatsApp button to open a chat with a prepared message. Review it and press Send."
+     data-ar="اضغط على زر واتساب لفتح محادثة برسالة جاهزة. راجعها ثم اضغط إرسال.">
+    Tap the WhatsApp button to open a chat with a prepared message. Review it and press Send.
   </p>
+
 </section>
+
 </main>
 
+<!-- FOOTER -->
+
 <footer>
+
   <div class="footer-name">OUD AL HERA</div>
-  <p data-en="The Art of Luxury Fragrance"
-     data-ar="فن العطور الفاخرة">The Art of Luxury Fragrance</p>
+
+  <p>The Art of Luxury Fragrance</p>
 
   <div class="footer-links">
-    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-    <a href="#branches" data-en="Our Branches" data-ar="فروعنا">Our Branches</a>
-    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#branches">Our Branches</a>
+    <a href="#contact">Contact</a>
     <a href="https://www.instagram.com/oudalheraperfumesofficial/"
-       target="_blank" rel="noopener">Instagram</a>
+       target="_blank" rel="noopener">
+      Instagram
+    </a>
   </div>
 
   <p>© <span id="year"></span> OUD AL HERA. All Rights Reserved.</p>
+
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
 
 <a class="whatsapp-float"
    href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20perfumes."
-   target="_blank" rel="noopener"
+   target="_blank"
+   rel="noopener"
    aria-label="Chat with OUD AL HERA on WhatsApp">
+
   <span>◉</span>
-  <span data-en="WhatsApp Us" data-ar="راسلنا واتساب">WhatsApp Us</span>
+  <span>WhatsApp Us</span>
+
 </a>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-const languageButton = document.getElementById("languageButton");
+const languageButton =
+  document.getElementById("languageButton");
+
 let currentLanguage = "en";
 
 languageButton.addEventListener("click", function () {
-  currentLanguage = currentLanguage === "en" ? "ar" : "en";
+
+  currentLanguage =
+    currentLanguage === "en" ? "ar" : "en";
 
   document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
 
-  document.querySelectorAll("[data-en][data-ar]").forEach(function (element) {
-    element.textContent = element.getAttribute("data-" + currentLanguage);
-  });
+  document.documentElement.dir =
+    currentLanguage === "ar" ? "rtl" : "ltr";
 
-  languageButton.textContent = currentLanguage === "en" ? "العربية" : "English";
+  document.querySelectorAll("[data-en][data-ar]")
+    .forEach(function (element) {
+
+      element.textContent =
+        element.getAttribute("data-" + currentLanguage);
+
+    });
+
+  languageButton.textContent =
+    currentLanguage === "en" ? "العربية" : "English";
+
 });
 </script>
 
 </body>
-</html>
+  </html>
+  
