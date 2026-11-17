@@ -4,797 +4,456 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#062b22">
-<meta name="description" content="Discover OUD AL HERA, inspired by the elegance and heritage of Arabian fragrance.">
-<title>OUD AL HERA | Arabian Fragrance</title>
+<meta name="theme-color" content="#062c22">
+<title>OUD AL HERA | Luxury Perfumes</title>
+<meta name="description" content="Discover OUD AL HERA. Explore our UAE branches and contact us through WhatsApp or Instagram.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --green: #062b22;
-  --green-light: #0b4032;
-  --green-dark: #031a14;
+  --green: #062c22;
+  --green2: #0b4031;
   --gold: #d5b36a;
-  --gold-light: #f0d99e;
-  --ivory: #f8f3e8;
-  --muted: #c8c1ad;
+  --ivory: #f7f1e5;
+  --muted: #c9c1ae;
+  --dark: #031b15;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
 }
 
 body {
   background: var(--green);
   color: var(--ivory);
   font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
-
-button {
-  font: inherit;
-}
-
-.container {
-  width: min(1160px, 90%);
-  margin: auto;
-}
-
-/* HEADER */
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(3, 26, 20, .97);
-  border-bottom: 1px solid rgba(213, 179, 106, .45);
-  backdrop-filter: blur(12px);
-}
-
-.header-inner {
-  min-height: 88px;
-  width: min(1250px, 92%);
-  margin: auto;
+  min-height: 78px;
+  padding: 15px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  border-bottom: 1px solid rgba(213,179,106,.35);
+  background: rgba(3,27,21,.97);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 12px;
 }
 
 .brand img {
-  width: 65px;
-  height: 65px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
-  background: white;
-  border-radius: 3px;
 }
 
 .brand-name {
-  color: var(--gold);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
+  color: var(--gold);
+  font-size: 25px;
   letter-spacing: 3px;
-  white-space: nowrap;
+  font-weight: 600;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 27px;
 }
 
 nav a {
+  color: var(--ivory);
   font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: color .3s;
+  transition: .3s;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
   color: var(--gold);
 }
 
-.language-button {
+.language-btn {
   background: transparent;
   border: 1px solid var(--gold);
   color: var(--gold);
-  padding: 10px 13px;
+  padding: 9px 13px;
   cursor: pointer;
-  font-size: 12px;
+  font-family: inherit;
 }
 
-.menu-button {
-  display: none;
-  color: var(--gold);
-  background: transparent;
-  border: 1px solid var(--gold);
-  padding: 8px 12px;
-  font-size: 21px;
-  cursor: pointer;
+.hero {
+  min-height: 660px;
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, rgba(22,83,61,.65), transparent 65%),
+    linear-gradient(135deg, #062c22, #031b15);
 }
 
-/* GENERAL */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  border: 1px solid rgba(213,179,106,.18);
+  transform: rotate(45deg);
+}
+
+.hero::after {
+  width: 240px;
+  height: 240px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
 
 .eyebrow {
   color: var(--gold);
   font-size: 11px;
   letter-spacing: 5px;
+  margin-bottom: 22px;
   text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(42px, 6vw, 66px);
-  line-height: 1.05;
-  font-weight: 500;
-  color: var(--gold);
-}
-
-.gold-line {
-  width: 75px;
-  height: 1px;
-  background: var(--gold);
-  margin: 25px 0;
-}
-
-.description {
-  color: var(--muted);
-  line-height: 2;
-  font-size: 14px;
-  max-width: 620px;
-}
-
-.gold-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 27px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 28px;
-  transition: .3s;
-}
-
-.gold-button:hover {
-  background: var(--gold);
-  color: var(--green-dark);
-}
-
-/* PAGE 1 - HOME */
-
-.hero {
-  min-height: 690px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 80% 50%, rgba(28, 88, 65, .5), transparent 50%),
-    linear-gradient(125deg, #031a14, #0a382b 65%, #031a14);
-}
-
-.hero::before {
-  content: "OUD";
-  position: absolute;
-  right: 3%;
-  bottom: -100px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(180px, 35vw, 450px);
-  color: rgba(213, 179, 106, .045);
-  pointer-events: none;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 430px;
-  height: 430px;
-  border: 1px solid rgba(213, 179, 106, .18);
-  border-radius: 50%;
-  right: 9%;
-  top: 15%;
-  box-shadow:
-    0 0 0 30px rgba(213, 179, 106, .025),
-    0 0 0 60px rgba(213, 179, 106, .02);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 100px 0;
-  max-width: 760px;
 }
 
 .hero h1 {
-  color: var(--gold);
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(68px, 11vw, 125px);
-  line-height: .95;
+  font-size: clamp(48px, 9vw, 92px);
+  line-height: 1;
+  letter-spacing: 7px;
+  color: var(--gold);
   font-weight: 500;
-  letter-spacing: 4px;
 }
 
-.hero-subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(25px, 4vw, 39px);
-  margin-top: 23px;
-  color: var(--ivory);
-}
-
-.hero-description {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 2;
+.hero h2 {
   margin-top: 20px;
-  max-width: 520px;
-}
-
-.hero-decoration {
-  position: absolute;
-  z-index: 1;
-  right: 12%;
-  top: 25%;
-  width: 260px;
-  height: 360px;
-  border: 1px solid rgba(213, 179, 106, .4);
-  border-radius: 48% 48% 12px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-decoration-inner {
-  width: 210px;
-  height: 310px;
-  border: 1px solid rgba(213, 179, 106, .5);
-  border-radius: 48% 48% 8px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  color: var(--gold);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 29px;
-  letter-spacing: 3px;
-}
-
-.hero-decoration-inner span {
-  display: block;
-  font-size: 12px;
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 400;
   letter-spacing: 2px;
-  margin-top: 12px;
 }
 
-/* BRAND STORY */
-
-.story {
-  padding: 110px 0;
-  background: var(--ivory);
-  color: var(--green-dark);
+.hero p {
+  max-width: 570px;
+  margin: 22px auto 30px;
+  line-height: 1.9;
+  color: var(--muted);
+  font-size: 13px;
 }
 
-.story-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 75px;
-  align-items: center;
-}
-
-.story-mark {
-  border: 1px solid #a68a50;
-  min-height: 340px;
-  display: flex;
-  flex-direction: column;
+.button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  text-align: center;
-  background:
-    radial-gradient(ellipse, rgba(213,179,106,.17), transparent 70%);
-}
-
-.story-mark strong {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(45px, 6vw, 75px);
-  color: #947239;
-  letter-spacing: 4px;
-  font-weight: 500;
-}
-
-.story-mark span {
-  color: #947239;
-  letter-spacing: 4px;
-  font-size: 10px;
-  margin-top: 20px;
-}
-
-.story .section-title {
-  color: #947239;
-}
-
-.story .description {
-  color: #55584d;
-}
-
-/* BRAND VALUES */
-
-.values {
-  padding: 85px 0;
-  background: var(--green-light);
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 45px;
-}
-
-.value-card {
-  padding: 38px 25px;
-  border: 1px solid rgba(213,179,106,.45);
-  text-align: center;
+  padding: 15px 25px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
   transition: .3s;
+  cursor: pointer;
+  background: transparent;
 }
 
-.value-card:hover {
-  background: rgba(213,179,106,.08);
-  transform: translateY(-5px);
+.button:hover {
+  background: var(--gold);
+  color: var(--dark);
 }
 
-.value-number {
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
+.button.filled {
+  background: var(--gold);
+  color: var(--dark);
 }
 
-.value-card h3 {
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
-  margin: 13px 0;
+.button.filled:hover {
+  background: var(--ivory);
+  border-color: var(--ivory);
 }
 
-.value-card p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.9;
-}
-
-/* PAGE 3 - BRANCHES */
-
-.branches-section {
-  padding: 110px 0;
-  background: var(--green);
-}
-
-.center-heading {
+.section {
+  padding: 95px 7%;
   text-align: center;
-  margin-bottom: 55px;
 }
 
-.center-heading .gold-line {
-  margin: 25px auto;
+.section-title {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 6vw, 55px);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.gold-line {
+  height: 1px;
+  width: 75px;
+  background: var(--gold);
+  margin: 20px auto 30px;
+}
+
+.section-intro {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.branches {
+  background: var(--ivory);
+  color: var(--green);
+}
+
+.branches .section-intro {
+  color: #686052;
 }
 
 .branch-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .branch-card {
-  position: relative;
-  min-height: 190px;
-  border: 1px solid rgba(213,179,106,.55);
-  padding: 35px;
-  background: linear-gradient(135deg, #0b3a2d, #041f18);
-  transition: .35s;
-  overflow: hidden;
+  border: 1px solid rgba(153,119,52,.55);
+  padding: 30px 20px;
+  background: #fffaf0;
+  transition: .3s;
 }
 
 .branch-card:hover {
-  border-color: var(--gold-light);
   transform: translateY(-4px);
-  background: linear-gradient(135deg, #104735, #06291f);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 .branch-number {
-  position: absolute;
-  right: 22px;
-  top: 10px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 65px;
-  color: rgba(213,179,106,.12);
-}
-
-.branch-city {
-  color: var(--gold);
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  color: #a77d32;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .branch-card h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 29px;
-  font-weight: 500;
-  margin: 17px 0 10px;
-  color: var(--ivory);
+  font-size: 25px;
+  color: var(--green);
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .branch-card p {
-  color: var(--muted);
   font-size: 12px;
-  line-height: 1.8;
+  line-height: 1.9;
+  color: #716958;
 }
 
-.branch-wide {
+.branch-card.full {
   grid-column: 1 / -1;
 }
 
-/* PAGE 4 - CONTACT */
-
-.contact-section {
-  padding: 110px 0;
-  background: var(--ivory);
-  color: var(--green-dark);
+.contact {
+  background:
+    radial-gradient(ellipse at top, rgba(24,83,60,.55), transparent 65%),
+    var(--green);
 }
 
 .contact-grid {
+  max-width: 900px;
+  margin: 45px auto 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 65px;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 20px;
 }
 
-.contact-section .section-title {
-  color: #947239;
+.contact-card {
+  padding: 30px 20px;
+  border: 1px solid rgba(213,179,106,.45);
+  background: rgba(3,27,21,.4);
 }
 
-.contact-section .description {
-  color: #55584d;
+.contact-icon {
+  font-size: 27px;
+  margin-bottom: 15px;
 }
 
-.contact-details {
-  margin-top: 30px;
+.contact-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: 26px;
+  margin-bottom: 12px;
 }
 
-.contact-item {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(148,114,57,.3);
-}
-
-.contact-item span {
-  display: block;
-  color: #947239;
-  font-size: 10px;
-  letter-spacing: 3px;
-  margin-bottom: 9px;
-}
-
-.contact-item a,
-.contact-item p {
-  font-size: 14px;
-  color: var(--green-dark);
+.contact-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
   overflow-wrap: anywhere;
 }
 
-.contact-panel {
-  background: var(--green);
-  color: var(--ivory);
-  padding: 50px 40px;
-  border: 1px solid var(--gold);
-  text-align: center;
+.contact-card .button {
+  margin-top: 20px;
 }
 
-.contact-panel h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
-  color: var(--gold);
-  font-weight: 500;
+.contact-card.full {
+  grid-column: 1 / -1;
 }
 
-.contact-panel p {
-  font-size: 13px;
+.contact-note {
   color: var(--muted);
-  line-height: 2;
-  margin-top: 15px;
+  font-size: 12px;
+  margin-top: 30px;
+  line-height: 1.8;
 }
-
-/* FOOTER */
 
 footer {
-  background: var(--green-dark);
-  padding: 55px 0 25px;
-  border-top: 1px solid rgba(213,179,106,.45);
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid rgba(213,179,106,.3);
+  background: var(--dark);
 }
 
-.footer-main {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 45px;
-  padding-bottom: 40px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.footer-logo img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  background: white;
-}
-
-.footer-logo h3 {
-  font-family: 'Cormorant Garamond', serif;
+.footer-name {
   color: var(--gold);
-  letter-spacing: 3px;
-  font-size: 25px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  letter-spacing: 4px;
 }
 
-.footer-about {
+footer p {
   color: var(--muted);
-  font-size: 12px;
-  line-height: 2;
-  margin-top: 18px;
-  max-width: 330px;
+  font-size: 10px;
+  margin-top: 12px;
+  line-height: 1.8;
 }
 
-.footer-column h4 {
+.footer-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
   color: var(--gold);
   font-size: 11px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
 }
 
-.footer-column a {
-  display: block;
-  font-size: 12px;
-  color: var(--muted);
-  margin: 13px 0;
-  transition: .3s;
-}
-
-.footer-column a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  padding-top: 22px;
-  border-top: 1px solid rgba(213,179,106,.2);
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  color: #9d9a89;
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-
-/* WHATSAPP */
-
-.whatsapp-button {
+.whatsapp-float {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 90;
-  background: #168b50;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  background: #20bd68;
   color: white;
-  padding: 15px 20px;
+  padding: 14px 19px;
   border-radius: 40px;
-  font-size: 12px;
-  box-shadow: 0 5px 25px rgba(0,0,0,.35);
-  transition: .3s;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(0,0,0,.3);
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
 
-.whatsapp-button:hover {
-  background: #0c7040;
-  transform: translateY(-3px);
+.whatsapp-float:hover {
+  background: #159c53;
 }
 
-/* ARABIC */
-
-body.ar {
-  direction: rtl;
+[dir="rtl"] {
+  font-family: 'Amiri', serif;
 }
 
-body.ar nav {
-  direction: rtl;
+[dir="rtl"] nav {
+  flex-direction: row-reverse;
 }
 
-body.ar .hero-content,
-body.ar .story-grid,
-body.ar .contact-grid {
-  text-align: right;
-}
+@media (max-width: 720px) {
+  header {
+    padding: 12px 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-body.ar .gold-line {
-  margin-right: 0;
-}
+  .brand {
+    width: 100%;
+    justify-content: center;
+  }
 
-body.ar .branch-number {
-  right: auto;
-  left: 22px;
-}
-
-body.ar .whatsapp-button {
-  right: auto;
-  left: 22px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width: 950px) {
   nav {
-    gap: 14px;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   nav a {
     font-size: 9px;
-  }
-
-  .hero-decoration {
-    right: 5%;
-    opacity: .55;
-  }
-}
-
-@media(max-width: 720px) {
-  .header-inner {
-    min-height: 75px;
-    flex-wrap: wrap;
-    padding: 10px 0;
-  }
-
-  .brand img {
-    width: 53px;
-    height: 53px;
-  }
-
-  .brand-name {
-    font-size: 21px;
-  }
-
-  .menu-button {
-    display: block;
-    margin-left: auto;
-  }
-
-  .language-button {
-    order: 2;
-  }
-
-  nav {
-    display: none;
-    order: 3;
-    width: 100%;
-    padding: 15px 0;
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-    gap: 0;
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  nav a {
-    padding: 13px;
-    font-size: 11px;
-    border-top: 1px solid rgba(213,179,106,.12);
+    letter-spacing: 1px;
   }
 
   .hero {
-    min-height: 610px;
+    min-height: 570px;
   }
 
-  .hero-content {
-    padding: 90px 0;
+  .hero h1 {
+    letter-spacing: 4px;
   }
 
-  .hero-decoration {
-    width: 170px;
-    height: 250px;
-    top: auto;
-    bottom: 35px;
-    right: 8%;
-    opacity: .23;
+  .section {
+    padding: 70px 5%;
   }
 
-  .hero-decoration-inner {
-    width: 140px;
-    height: 210px;
-    font-size: 20px;
-  }
-
-  .story-grid,
+  .branch-grid,
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
   }
 
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .branch-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .branch-wide {
+  .branch-card.full,
+  .contact-card.full {
     grid-column: auto;
   }
 
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media(max-width: 420px) {
-  .brand-name {
-    font-size: 18px;
-    letter-spacing: 2px;
-  }
-
-  .language-button {
-    padding: 8px;
-  }
-
-  .section-title {
-    font-size: 43px;
-  }
-
-  .contact-panel {
-    padding: 35px 20px;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-brand {
-    grid-column: auto;
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 15px;
   }
 }
 </style>
@@ -802,257 +461,188 @@ body.ar .whatsapp-button {
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-  <div class="header-inner">
+  <a class="brand" href="#home" aria-label="OUD AL HERA home">
+    <img src="logo.jpg" alt="OUD AL HERA original logo"
+         onerror="this.style.display='none'">
+    <span class="brand-name">OUD AL HERA</span>
+  </a>
 
-    <a href="#home" class="brand">
-      <img src="logo.jpg" alt="Original OUD AL HERA logo">
-      <span class="brand-name">OUD AL HERA</span>
-    </a>
-
-    <button class="menu-button" id="menuButton" aria-label="Open navigation">
-      ☰
-    </button>
-
-    <nav id="navigation">
-      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-      <a href="#story" data-en="Our Story" data-ar="قصتنا">Our Story</a>
-      <a href="#branches" data-en="Branches" data-ar="فروعنا">Branches</a>
-      <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-    </nav>
-
-    <button class="language-button" id="languageButton">
-      العربية
-    </button>
-
-  </div>
+  <nav>
+    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="#branches" data-en="Our Branches" data-ar="فروعنا">Our Branches</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    <button class="language-btn" id="languageButton" type="button">العربية</button>
+  </nav>
 </header>
 
-
-<!-- PAGE 1: HOME -->
-
 <main>
-
 <section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
+  <div class="hero-content">
+    <img class="hero-logo" src="logo.jpg" alt="OUD AL HERA logo"
+         onerror="this.style.display='none'">
 
-      <p class="eyebrow"
-         data-en="THE ESSENCE OF ARABIAN LUXURY"
-         data-ar="جوهر الفخامة العربية">
-        THE ESSENCE OF ARABIAN LUXURY
-      </p>
+    <div class="eyebrow" data-en="The Art of Luxury Fragrance"
+         data-ar="فن العطور الفاخرة">The Art of Luxury Fragrance</div>
 
-      <h1>OUD<br>AL HERA</h1>
+    <h1>OUD AL HERA</h1>
 
-      <p class="hero-subtitle"
-         data-en="More Than a Fragrance... A Timeless Experience."
-         data-ar="أكثر من مجرد عطر... تجربة خالدة.">
-        More Than a Fragrance...<br>
-        A Timeless Experience.
-      </p>
+    <h2 data-en="A Signature of Elegance"
+        data-ar="عنوان الأناقة">A Signature of Elegance</h2>
 
-      <p class="hero-description"
-         data-en="Discover the beauty of fragrance, inspired by Arabian heritage and timeless elegance."
-         data-ar="اكتشف جمال العطور المستوحاة من التراث العربي والأناقة الخالدة.">
-        Discover the beauty of fragrance, inspired by Arabian heritage and timeless elegance.
-      </p>
+    <p data-en="Discover the world of OUD AL HERA. Experience elegance, luxury and the beauty of fragrance."
+       data-ar="اكتشف عالم عود الهيرا. استمتع بالأناقة والفخامة وجمال العطور.">
+      Discover the world of OUD AL HERA. Experience elegance, luxury and the beauty of fragrance.
+    </p>
 
-      <a href="#branches" class="gold-button"
-         data-en="FIND OUR BRANCHES"
-         data-ar="اكتشف فروعنا">
-        FIND OUR BRANCHES
-      </a>
-
-    </div>
-  </div>
-
-  <div class="hero-decoration">
-    <div class="hero-decoration-inner">
-      OUD
-      <span>AL HERA</span>
-    </div>
+    <a class="button filled" href="#branches"
+       data-en="Explore Our Branches"
+       data-ar="اكتشف فروعنا">Explore Our Branches</a>
   </div>
 </section>
 
+<section class="section branches" id="branches">
+  <h2 class="section-title" data-en="Our Branches" data-ar="فروعنا">Our Branches</h2>
+  <div class="gold-line"></div>
 
-<!-- OUR STORY -->
+  <p class="section-intro"
+     data-en="Find OUD AL HERA at our selected locations across the United Arab Emirates."
+     data-ar="تجدون عود الهيرا في مواقعنا المختارة في دولة الإمارات العربية المتحدة.">
+    Find OUD AL HERA at our selected locations across the United Arab Emirates.
+  </p>
 
-<section class="story" id="story">
-  <div class="container story-grid">
+  <div class="branch-grid">
+    <article class="branch-card">
+      <div class="branch-number">01</div>
+      <h3>Madeena Shopping Centre</h3>
+      <p>Muhailah, Sharjah, UAE</p>
+    </article>
 
-    <div class="story-mark">
-      <strong>OUD<br>AL HERA</strong>
-      <span>ELEGANCE • TRADITION • LUXURY</span>
-    </div>
+    <article class="branch-card">
+      <div class="branch-number">02</div>
+      <h3>Jeeco</h3>
+      <p>Sharjah, UAE</p>
+    </article>
 
-    <div>
-      <p class="eyebrow"
-         data-en="THE BRAND"
-         data-ar="العلامة التجارية">
-        THE BRAND
-      </p>
+    <article class="branch-card">
+      <div class="branch-number">03</div>
+      <h3>Safari Mall</h3>
+      <p>Ras Al Khaimah (RAK), UAE</p>
+    </article>
 
-      <h2 class="section-title"
-          data-en="The Art of Timeless Fragrance"
-          data-ar="فن العطور الخالدة">
-        The Art of Timeless Fragrance
-      </h2>
+    <article class="branch-card">
+      <div class="branch-number">04</div>
+      <h3>Pasion Hypermarket</h3>
+      <p>26, Jabal Ali, Dubai, UAE</p>
+    </article>
 
-      <div class="gold-line"></div>
-
-      <p class="description"
-         data-en="OUD AL HERA celebrates the beauty of Arabian fragrance. Inspired by heritage, elegance and the art of perfumery, our brand represents a world where every fragrance becomes a memorable experience."
-         data-ar="تحتفي OUD AL HERA بجمال العطور العربية. مستوحاة من التراث والأناقة وفن صناعة العطور، تمثل علامتنا عالماً تصبح فيه كل رائحة تجربة لا تُنسى.">
-        OUD AL HERA celebrates the beauty of Arabian fragrance.
-        Inspired by heritage, elegance and the art of perfumery,
-        our brand represents a world where every fragrance
-        becomes a memorable experience.
-      </p>
-
-      <a href="#contact" class="gold-button"
-         data-en="CONTACT US"
-         data-ar="تواصل معنا">
-        CONTACT US
-      </a>
-    </div>
-
+    <article class="branch-card full">
+      <div class="branch-number">05</div>
+      <h3>Nesto Hypermarket</h3>
+      <p>Rolla, Sharjah, UAE</p>
+    </article>
   </div>
 </section>
 
+<section class="section contact" id="contact">
+  <h2 class="section-title" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+  <div class="gold-line"></div>
 
-<!-- BRAND VALUES -->
+  <p class="section-intro"
+     data-en="We would love to hear from you. Contact OUD AL HERA through WhatsApp or follow us on Instagram."
+     data-ar="يسعدنا التواصل معكم. تواصلوا مع عود الهيرا عبر واتساب أو تابعونا على إنستغرام.">
+    We would love to hear from you. Contact OUD AL HERA through WhatsApp or follow us on Instagram.
+  </p>
 
-<section class="values">
-  <div class="container">
-
-    <div class="center-heading">
-      <p class="eyebrow">OUD AL HERA</p>
-      <h2 class="section-title"
-          data-en="Our Identity"
-          data-ar="هويتنا">
-        Our Identity
-      </h2>
-      <div class="gold-line"></div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">✆</div>
+      <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
+      <p>+971 56 968 2627</p>
+      <a class="button filled"
+         href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20perfumes."
+         target="_blank" rel="noopener"
+         data-en="Message Us Now"
+         data-ar="راسلنا الآن">Message Us Now</a>
     </div>
 
-    <div class="values-grid">
+    <div class="contact-card">
+      <div class="contact-icon">◎</div>
+      <h3 data-en="Instagram" data-ar="إنستغرام">Instagram</h3>
+      <p>@oudalheraperfumesofficial</p>
+      <a class="button"
+         href="https://www.instagram.com/oudalheraperfumesofficial/"
+         target="_blank" rel="noopener"
+         data-en="Visit Instagram"
+         data-ar="زيارة إنستغرام">Visit Instagram</a>
+    </div>
 
-      <article class="value-card">
-        <div class="value-number">01</div>
-        <h3 data-en="Elegance" data-ar="الأناقة">Elegance</h3>
-        <p data-en="A timeless expression of refined fragrance and style."
-           data-ar="تعبير خالد عن العطور الراقية والأناقة.">
-          A timeless expression of refined fragrance and style.
-        </p>
-      </article>
-
-      <article class="value-card">
-        <div class="value-number">02</div>
-        <h3 data-en="Tradition" data-ar="التقاليد">Tradition</h3>
-        <p data-en="Inspired by the richness of Arabian fragrance heritage."
-           data-ar="مستوحاة من ثراء تراث العطور العربية.">
-          Inspired by the richness of Arabian fragrance heritage.
-        </p>
-      </article>
-
-      <article class="value-card">
-        <div class="value-number">03</div>
-        <h3 data-en="Luxury" data-ar="الفخامة">Luxury</h3>
-        <p data-en="A world of distinctive aromas and memorable experiences."
-           data-ar="عالم من الروائح المميزة والتجارب التي لا تُنسى.">
-          A world of distinctive aromas and memorable experiences.
-        </p>
-      </article>
-
+    <div class="contact-card full">
+      <div class="contact-icon">✧</div>
+      <h3>OUD AL HERA</h3>
+      <p data-en="Luxury Fragrance • United Arab Emirates"
+         data-ar="عطور فاخرة • الإمارات العربية المتحدة">
+        Luxury Fragrance • United Arab Emirates
+      </p>
+      <a class="button filled"
+         href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+         target="_blank" rel="noopener"
+         data-en="Send an Enquiry"
+         data-ar="أرسل استفسارك">Send an Enquiry</a>
     </div>
   </div>
+
+  <p class="contact-note"
+     data-en="Tap the WhatsApp button to open a chat with a prepared message. You can review it and press Send."
+     data-ar="اضغط على زر واتساب لفتح محادثة برسالة جاهزة. يمكنك مراجعتها ثم الضغط على إرسال.">
+    Tap the WhatsApp button to open a chat with a prepared message. You can review it and press Send.
+  </p>
 </section>
+</main>
 
+<footer>
+  <div class="footer-name">OUD AL HERA</div>
+  <p data-en="The Art of Luxury Fragrance"
+     data-ar="فن العطور الفاخرة">The Art of Luxury Fragrance</p>
 
-<!-- PAGE 3: OUR BRANCHES -->
-
-<section class="branches-section" id="branches">
-  <div class="container">
-
-    <div class="center-heading">
-      <p class="eyebrow"
-         data-en="VISIT OUD AL HERA"
-         data-ar="زر OUD AL HERA">
-        VISIT OUD AL HERA
-      </p>
-
-      <h2 class="section-title"
-          data-en="Our UAE Branches"
-          data-ar="فروعنا في الإمارات">
-        Our UAE Branches
-      </h2>
-
-      <div class="gold-line"></div>
-
-      <p class="description" style="margin:auto"
-         data-en="Find your nearest OUD AL HERA branch and discover our world of fragrance."
-         data-ar="اعثر على أقرب فرع لـ OUD AL HERA واكتشف عالم العطور لدينا.">
-        Find your nearest OUD AL HERA branch and discover our world of fragrance.
-      </p>
-    </div>
-
-    <div class="branch-grid">
-
-      <article class="branch-card">
-        <span class="branch-number">01</span>
-        <p class="branch-city">SHARJAH</p>
-        <h3>Madeena Shopping Centre</h3>
-        <p>Muhailah, Sharjah, UAE</p>
-      </article>
-
-      <article class="branch-card">
-        <span class="branch-number">02</span>
-        <p class="branch-city">SHARJAH</p>
-        <h3>Jeeco</h3>
-        <p>Sharjah, UAE</p>
-      </article>
-
-      <article class="branch-card">
-        <span class="branch-number">03</span>
-        <p class="branch-city">RAS AL KHAIMAH</p>
-        <h3>Safari Mall</h3>
-        <p>Ras Al Khaimah, UAE</p>
-      </article>
-
-      <article class="branch-card">
-        <span class="branch-number">04</span>
-        <p class="branch-city">DUBAI</p>
-        <h3>Pasion Hypermarket</h3>
-        <p>26, Jabal Ali, Dubai, UAE</p>
-      </article>
-
-      <article class="branch-card branch-wide">
-        <span class="branch-number">05</span>
-        <p class="branch-city">SHARJAH</p>
-        <h3>Nesto Hypermarket</h3>
-        <p>Rolla, Sharjah, UAE</p>
-      </article>
-
-    </div>
-
+  <div class="footer-links">
+    <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="#branches" data-en="Our Branches" data-ar="فروعنا">Our Branches</a>
+    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    <a href="https://www.instagram.com/oudalheraperfumesofficial/"
+       target="_blank" rel="noopener">Instagram</a>
   </div>
-</section>
 
+  <p>© <span id="year"></span> OUD AL HERA. All Rights Reserved.</p>
+</footer>
 
-<!-- PAGE 4: CONTACT -->
+<a class="whatsapp-float"
+   href="https://wa.me/971569682627?text=Hello%20OUD%20AL%20HERA%2C%20I%20would%20like%20to%20know%20more%20about%20your%20perfumes."
+   target="_blank" rel="noopener"
+   aria-label="Chat with OUD AL HERA on WhatsApp">
+  <span>◉</span>
+  <span data-en="WhatsApp Us" data-ar="راسلنا واتساب">WhatsApp Us</span>
+</a>
 
-<section class="contact-section" id="contact">
-  <div class="container contact-grid">
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    <div>
-      <p class="eyebrow"
-         data-en="GET IN TOUCH"
-         data-ar="تواصل معنا">
-        GET IN TOUCH
-      </p>
+const languageButton = document.getElementById("languageButton");
+let currentLanguage = "en";
 
-      <h2 class="section-title"
-          data-
+languageButton.addEventListener("click", function () {
+  currentLanguage = currentLanguage === "en" ? "ar" : "en";
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(function (element) {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  languageButton.textContent = currentLanguage === "en" ? "العربية" : "English";
+});
+</script>
+
+</body>
+</html>
